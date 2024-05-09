@@ -7,10 +7,12 @@ import kr.ac.tukorea.ge.colormatchs.framework.view.Metrics;
 
 public class ChangeButton extends Sprite {
 
-    public ChangeButton() {
-        super(R.drawable.R_Color);
-        setPosition(2.0f, 2.0f, 2.0f, 2.0f);
+    private static final float WIDTH = 2.0f; // 사각형의 너비
+    private static final float HEIGHT = 2.0f; // 사각형의 높이
 
+
+    public ChangeButton(int colorId) {
+        super(colorId);
     }
 
 }

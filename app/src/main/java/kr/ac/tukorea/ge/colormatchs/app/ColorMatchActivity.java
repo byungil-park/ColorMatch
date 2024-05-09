@@ -10,7 +10,7 @@ public class ColorMatchActivity extends GameActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Metrics.setGameSize(16, 9);
+        Metrics.setGameSize(8, 16);
         super.onCreate(savedInstanceState);
         new MainScene().push();
     }
