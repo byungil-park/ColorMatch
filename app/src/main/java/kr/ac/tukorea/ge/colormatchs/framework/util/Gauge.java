@@ -5,7 +5,7 @@ import android.graphics.Paint;
 
 import androidx.core.content.res.ResourcesCompat;
 
-import kr.ac.tukorea.ge.spgp2024.framework.view.GameView;
+import kr.ac.tukorea.ge.colormatchs.framework.view.GameView;
 
 public class Gauge {
     private final Paint fgPaint = new Paint();

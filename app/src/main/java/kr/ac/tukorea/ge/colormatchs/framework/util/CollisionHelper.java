@@ -2,7 +2,7 @@ package kr.ac.tukorea.ge.colormatchs.framework.util;
 
 import android.graphics.RectF;
 
-import kr.ac.tukorea.ge.spgp2024.framework.interfaces.IBoxCollidable;
+import kr.ac.tukorea.ge.colormatchs.framework.interfaces.IBoxCollidable;
 
 public class CollisionHelper {
     public static boolean collides(IBoxCollidable obj1, IBoxCollidable obj2) {
