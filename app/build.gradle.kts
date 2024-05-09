@@ -6,6 +6,10 @@ android {
     namespace = "kr.ac.tukorea.ge.colormatchs"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
     defaultConfig {
         applicationId = "kr.ac.tukorea.ge.colormatchs"
         minSdk = 24
