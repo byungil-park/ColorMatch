@@ -28,9 +28,15 @@ public class CollisionChecker implements IGameObject {
                 if (CollisionHelper.collides(enemy, hitbar)) {
                     //Log.d(TAG, "Collision !!");
                     //scene.remove(MainScene.Layer.HitBar, hitbar);
-
-                    scene.remove(MainScene.Layer.enemy, enemy);
-                    //scene.addScore(enemy.getScore());
+                    if(enemy.getMipmapId() == hitbar.getMipmapId())
+                    {
+                        scene.addScore(enemy.getScore());
+                        scene.remove(MainScene.Layer.enemy, enemy);
+                    }
+                    else {
+                        scene.dreaseLife(1);
+                        scene.remove(MainScene.Layer.enemy, enemy);
+                    }
 
                     break;
                 }

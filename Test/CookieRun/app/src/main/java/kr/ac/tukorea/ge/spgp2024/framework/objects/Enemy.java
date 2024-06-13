@@ -22,6 +22,8 @@ public class Enemy extends AnimSprite implements IBoxCollidable, IRecyclable {
     private int level;
     private int life, maxLife;
 
+    private int mipmapId;
+
     private Enemy(int level, int index) {
         super(0, 0);
         init(level, index);
@@ -32,7 +34,12 @@ public class Enemy extends AnimSprite implements IBoxCollidable, IRecyclable {
         this.level = level;
         this.life = this.maxLife = (level + 1) * 10;
         setAnimationResource(resIds[level], ANIM_FPS);
+        this.mipmapId = resIds[level];
         setPosition(Metrics.width / 10 * (2 * index + 1), -RADIUS, RADIUS);
+    }
+
+    public int getMipmapId() {
+        return mipmapId;
     }
 
     public static Enemy get(int level, int index) {
@@ -75,8 +82,9 @@ public class Enemy extends AnimSprite implements IBoxCollidable, IRecyclable {
     }
 
     public int getScore() {
-        return (level + 1) * 100;
+        return 100;
     }
+
 
     public boolean decreaseLife(int power) {
         life -= power;
